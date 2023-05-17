@@ -13,11 +13,11 @@ The following command summary can be used to get database servers installed and 
   ## Postgres Server:
   Install command: `sudo apt install postgresql postgresql-contrib`
   
-  Other relevant commands:
-      Start Postgres server `sudo service postgresql start`
-      Check DATABASE status: `sudo service postgresql status `
-      Get the version number: `psql --version`
-      Stop Postgres server: `sudo service postgresql stop`
+  Other relevant commands.
+      Start Postgres server. `sudo service postgresql start`
+      Check DATABASE status. `sudo service postgresql status `
+      Get the version number. `psql --version`
+      Stop Postgres server. `sudo service postgresql stop`
         
   ## MySQL
   Install command: `apt install mysql-server`
