@@ -14,7 +14,7 @@ The following command summary can be used to get database servers installed and 
   Install command.
   sudo apt install postgresql postgresql-contrib
   
-  Other relevant commands:
+  Other relevant commands.
       Start Postgres server.
         sudo service postgresql start
         
@@ -31,7 +31,7 @@ The following command summary can be used to get database servers installed and 
   Install command.
     apt install mysql-server
     
-  Other relevant commands:
+  Other relevant commands.
     Start MySQK server.
       sudo service mysql start
       
