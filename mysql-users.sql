@@ -1,4 +1,29 @@
 -- ****************************************************************************
+-- Basic MySQL database and user creation commands.
+-- ****************************************************************************
+CREATE DATABASE IF NOT EXISTS dbName;
+
+-- Create user that runs only on localhost of the MySQL server.
+-- NOTE: Granting ALL privileges is generally discouraged for security
+-- reasons. It is better to grant only the required privileges. For some'
+-- orgs, best practice is to allow most users the ability to run only 
+-- stored procs and functions.
+CREATE USER 'userName'@'localhost' IDENTIFIED BY 'userPwd';
+GRANT ALL PRIVILEGES ON dbName.* TO 'userName'@'localhost';
+FLUSH PRIVILEGES;
+
+-- Create user that can access the MySQL server from any location.
+-- This is generally not advised for security reasons.
+CREATE USER 'userName'@'%' IDENTIFIED BY 'userPwd';
+GRANT ALL PRIVILEGES ON dbName.* TO 'userName'@'%';
+FLUSH PRIVILEGES;
+
+-- Getting basic MySQL user info from the server.
+SELECT user, host, plugin FROM mysql.user;
+SHOW GRANTS for 'userName'@'localhost'; 
+SELECT @@VERSION AS `MySQL Version`, @@REQUIRE_SECURE_TRANSPORT AS `SSL ONLY`;
+
+-- ****************************************************************************
 -- MySQL Procedure to create a MySQL user.
 -- ****************************************************************************
 DROP PROCEDURE IF EXISTS CreateNewUser; 
