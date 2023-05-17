@@ -18,6 +18,11 @@ The following command summary can be used to get database servers installed and 
      * Stop Postgres server: `sudo service postgresql stop`
   
   3. The psql shell: `sudo -u postgres psql`
+     * List ALL databases: `\l `
+     * Change password: `\password userName`
+     * Delete user: `DROP ROLE IF EXISTS userName`
+     * List users: `\du+`
+
   
   ## [MySQL](https://dev.mysql.com/):
   The default user for MySQL is root.
