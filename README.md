@@ -10,7 +10,7 @@ These exampes were developed back in the days of MySQL 5.
 # WSL
 The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux.
 
-  ##Postgres Server:
+  ## Postgres Server:
   Install command.
   sudo apt install postgresql postgresql-contrib
   
@@ -27,7 +27,7 @@ The following command summary can be used to get database servers installed and 
       Stop Postgres server.
         sudo service postgresql stop
         
-  ##MySQL
+  ## MySQL
   Install command.
     apt install mysql-server
     
