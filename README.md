@@ -23,6 +23,6 @@ The following command summary can be used to get database servers installed and 
   Install command: `apt install mysql-server`
   
   Other relevant commands:
-    Start MySQK server: `sudo service mysql start`
+    Start MySQL server: `sudo service mysql start`
     Get the version number: `mysql --versio`      
-    Stop MySQK server: `sudo service mysql stop`
+    Stop MySQL server: `sudo service mysql stop`
