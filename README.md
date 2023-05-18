@@ -7,7 +7,7 @@ Included are examples for creating stored procedures and functions along with so
 The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux.
 
   ## [Postgres Server](https://www.postgresql.org/):
-  The default user for Postgres is postgress.
+  The default user for Postgres is `postgres``.
   
   1. Install command: `sudo apt install postgresql postgresql-contrib`
   
@@ -22,10 +22,13 @@ The following command summary can be used to get database servers installed and 
      * Change password: `\password userName`
      * Delete user: `DROP ROLE IF EXISTS userName`
      * List users: `\du+`
+     * Create database: `createdb -h localhost -p 5432 -U postgres dbName`
+     * Change to database: `\c dbName`
+     * Show tables: `\dt`
 
   
   ## [MySQL](https://dev.mysql.com/):
-  The default user for MySQL is root.
+  The default user for MySQL is `root`.
   
   1. Install command: `apt install mysql-server`
   
