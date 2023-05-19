@@ -6,6 +6,9 @@
 # But to run under Ubuntu 20.04 on WSL, which has a version of 
 # Python (3.7+ as of 2023-05-18) which is not compatible with the 
 # above listed modules, you'll need to install an alternative. I chose pg8000.
+# So, this example file, which is based on a backup file created using DBeaver
+# shows the pg8000 code required to connect and query a local Postgres server.
+# For more info, see the pg8000 github page.
 import pg8000.native
 
 def insert_entries(table_name):
