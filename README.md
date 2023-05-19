@@ -43,6 +43,8 @@ The following command summary can be used to get database servers installed and 
   ## [NGINX Webserver](https://nginx.org/en/docs/)
   Commands and configuration for running nginx on Ubuntu 20.04 WSL.
   
-  * Start the webserver: `sudo service nginx restart`
-  * Webserver root: `/etc/nginx`
+  * Start the web server: `sudo service nginx start`
+  * Restart the web server when config has changed: `sudo service nginx restart`
+  * Stop the web server: `sudo service nginx stop`
+  * Web server root: `/etc/nginx`
 
