@@ -1,5 +1,5 @@
 -- ***************************************************************
--- NOTE: In postgres, intger division truncates.
+-- NOTE: In postgres, intger division truncates result.
 -- ***************************************************************
 SELECT 5/2 AS "Integer Division", 5.0/2 as "Real Number Division";
 
