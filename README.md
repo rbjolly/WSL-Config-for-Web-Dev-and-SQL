@@ -4,7 +4,7 @@ The examples in this repo were created long ago in order to teach others some ba
 Included are examples for creating stored procedures and functions along with some basic SQL commands. These exampes were developed back in the days of MySQL 5.
 
 # [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux.
+The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux. Also includes information for getting the web server nginx running.
 
   ## [Postgres Server](https://www.postgresql.org/):
   The default user for Postgres is `postgres``.
@@ -39,3 +39,10 @@ The following command summary can be used to get database servers installed and 
    
   3. Commandline Client:
      * Starting a session: `mysql -u userName -p -D dbName`
+
+  ## [NGINX Webserver](https://nginx.org/en/docs/)
+  Commands and configuration for running nginx on Ubuntu 20.04 WSL.
+  
+  * Start the webserver: `sudo service nginx restart`
+  * Webserver root: `/etc/nginx`
+
