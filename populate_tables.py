@@ -1,7 +1,11 @@
-# When DBeaver generated this file, it requires that python have the followingh modules installed in order to query Postgres:
+# When DBeaver generated this file, it requires that python have the 
+# followingh modules installed in order to query Postgres:
 #   psycopg2==2.8.5
 #   python-decouple==3.3
-# But to run under Ubuntu 20.04 on WSL, which has a version of Python (3.7+ as of 2023-05-18) which is not compatible with the above listed modules, you'll need to install an alternative. I chose pg8000.
+
+# But to run under Ubuntu 20.04 on WSL, which has a version of 
+# Python (3.7+ as of 2023-05-18) which is not compatible with the 
+# above listed modules, you'll need to install an alternative. I chose pg8000.
 import pg8000.native
 
 def insert_entries(table_name):
