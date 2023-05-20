@@ -4,7 +4,7 @@ This repo demonstrates the process necessary to get Ubuntu 20.04 for WSL configu
 Sample code is included, but no warranty is made about its correctness. Use sample code at your own risk.
 
 # [Ubuntu 20.04 for WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux. Also includes information for getting the web server nginx running.
+The following command summary can be used to get database servers, web servers, and scripting engines installed and running under Windows Subsytem for Linux (WSL) for Ubuntu 20.04.
 
   ## [Postgres Server](https://www.postgresql.org/):
   The default user for Postgres is `postgres``.
