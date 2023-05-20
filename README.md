@@ -55,6 +55,13 @@ The following command summary can be used to get database servers installed and 
      * `sudo apt-get autoremove`
   
   ## [Python](https://www.python.org/doc/)
+  As of 20 May 2023, Ubuntu 20.04 for WSL has an installed Python
+  version that is greater than 3.7. This is incompatible with the 
+  psycopg driver for Postgres. In order to access Postgres, you'll 
+  need to install an alternative. The module pg8000 seems to work
+  fine as a replacement. See the populate_tables.py script in this 
+  repo for an example of how it works. For more info, see the pg8000 
+  github page.
    
   ## [NGINX Webserver](https://nginx.org/en/docs/)
   Commands and configuration for running nginx on Ubuntu 20.04 WSL.
