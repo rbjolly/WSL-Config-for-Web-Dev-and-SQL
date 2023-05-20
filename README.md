@@ -1,9 +1,9 @@
 # Introduction
-The examples in this repo were created long ago in order to teach others some basics of SQL. **I make no warranty on any code in this repo. Use at your own risk.**
+This repo demonstrates the process necessary to get Ubuntu 20.04 for WSL configured for software and database development. It shows how to ubstall database, web servers, scripting engines, and associated modules needed to get a development system configured for use. Note, unlike a typical linux server, WSL does not allow services to auttomatically run at startup, so you'll need to issue the commands for each of your needed database servers, web servers, and scripting engines after you login. Or you'll need to place them in a script that you can run to start them. Also, make sure ports for database servers, web servers, etc. are not occupied on Windows. This will potentially conflict with WSL.
 
-Included are examples for creating stored procedures and functions along with some basic SQL commands. These exampes were developed back in the days of MySQL 5.
+Sample code is included, but no warranty is made about its correctness. Use sample code at your own risk.
 
-# [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+# [Ubuntu 20.04 for WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 The following command summary can be used to get database servers installed and running under Windows Subsytem for Linux. Also includes information for getting the web server nginx running.
 
   ## [Postgres Server](https://www.postgresql.org/):
