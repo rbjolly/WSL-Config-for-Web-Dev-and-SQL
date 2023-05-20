@@ -40,12 +40,15 @@ The following command summary can be used to get database servers installed and 
      * Starting a session: `mysql -u userName -p -D dbName`
   
  ## [PHP](https://www.php.net/docs.php)
+ As of 20 May 2023, PHP 7.4 is the highest version available for Ubuntu 20.04 for WSL.
+ 
   1. Install PHP
      * `sudo apt update && sudo apt upgrade`
      * `sudo apt install php7.4-fpm -y`
 
   2. Installing modules --> sudo apt install php<version>-<package_name>
-     * Exampe install with some modules: `sudo apt install php7.4-{mysql,pgsql,zip,bcmath}`
+     * Exampe install with some modules: `sudo apt install php7.4-{mysql,zip,bcmath}`
+     * Install driver for postgres: `sudo apt -y install php-pgsql`
 
   3. To uninstall PHP 
      * `sudo apt-get purge php7.4-fpm`
