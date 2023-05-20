@@ -39,17 +39,17 @@ The following command summary can be used to get database servers installed and 
   3. Commandline Client:
      * Starting a session: `mysql -u userName -p -D dbName`
   
- ## [PHP](https://www.php.net/docs.php))
+ ## [PHP](https://www.php.net/docs.php)
   1. Install PHP
-    * `sudo apt update && sudo apt upgrade`
-    * `sudo apt install php7.4-fpm -y`
+     * `sudo apt update && sudo apt upgrade`
+     * `sudo apt install php7.4-fpm -y`
 
   2. Installing modules --> sudo apt install php<version>-<package_name>
-    * Exampe install with some modules: `sudo apt install php7.4-{mysql,pgsql,zip,bcmath}`
+     * Exampe install with some modules: `sudo apt install php7.4-{mysql,pgsql,zip,bcmath}`
 
   3. To uninstall PHP 
-    * `sudo apt-get purge php7.4-fpm`
-    * `sudo apt-get autoremove`
+     * `sudo apt-get purge php7.4-fpm`
+     * `sudo apt-get autoremove`
   
   ## [Python](https://www.python.org/doc/)
    
