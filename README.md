@@ -72,3 +72,15 @@ The following command summary can be used to get database servers, web servers, 
   * Stop the web server: `sudo service nginx stop`
   * Web server root: `/etc/nginx`
 
+  ## Automating Server Startup
+  You can automate the startup of services under WSL in a number of ways. One way to accomplish this task is to place the commands in a bash script and execute that script after you login. This way you only execute one command and start the services when you actually need them. So, create a file im your home directory called `'start-sercices.sh'` and issue the command `sudo chmod +x start-sercices.sh`. Then edit the file and enter the following: 
+  ```
+     #!/bin/sh
+     sudo service php7.4-fpm
+     sudo service nginx start
+     sudo service postgresql start
+     sudo service mysql start  
+  ```
+  When you login and need to make the services available, just issie the command `. start-sercices.sh`
+
+  
