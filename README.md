@@ -73,7 +73,7 @@ The following command summary can be used to get database servers, web servers, 
   
   11. Find the user and group options and verify they run as the user: www-data.
   
-  12. Find the listen directive and verify the socket path to access the PHP-FPM service on your server (listen = /run/php/php8.3-fpm.sock).
+  12. Find the listen directive and verify the socket path to access the PHP-FPM service on your server: `listen = /run/php/php8.3-fpm.sock`
   
   13. Restart PHP engine if changes were made: `sudo systemctl restart php8.3-fpm`
     
@@ -92,7 +92,7 @@ The following command summary can be used to get database servers, web servers, 
   Commands and configuration for running nginx on Ubuntu 24.04 WSL.
 
   1. Install the Nginx web server application to test access to the PHP-FPM service: `sudo apt install nginx -y`
-  2. Back up the default Nginx virtual host configuration: 'sudo mv /etc/nginx/sites-available/default  /etc/nginx/sites-available/default.BAK'
+  2. Back up the default Nginx virtual host configuration: `sudo mv /etc/nginx/sites-available/default  /etc/nginx/sites-available/default.BAK`
   3. Create a new default Nginx configuration file: `sudo nano /etc/nginx/sites-available/default`
   4. Add the following configurations to the file: 'server {
     listen 80 default_server;
@@ -123,7 +123,7 @@ The following command summary can be used to get database servers, web servers, 
   You can automate the startup of services under WSL in a number of ways. One way to accomplish this task is to place the commands in a bash script and execute that script after you login. This way you only execute one command and start the services when you actually need them. So, create a file in your home directory called `'start-sercices.sh'` and issue the command `sudo chmod +x start-sercices.sh` to make the file executable. Then edit the file and enter the following: 
   ```
      #!/bin/sh
-     sudo service php7.4-fpm
+     sudo service php8.3-fpm
      sudo service nginx start
      sudo service postgresql start
      sudo service mysql start  
