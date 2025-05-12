@@ -4,7 +4,7 @@ This repo demonstrates the process necessary to get Ubuntu 24.04 for WSL configu
 Sample code is included, but no warranty is made about its correctness. Use sample code at your own risk.
 
 # [Ubuntu 24.04 for WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-The following command summary can be used to get database servers, web servers, and scripting engines installed and running under Windows Subsytem for Linux (WSL) for Ubuntu 20.04.
+The following command summary can be used to get database servers, web servers, and scripting engines installed and running under Windows Subsytem for Linux (WSL) for Ubuntu 24.04.
 
   ## [Postgres Server](https://www.postgresql.org/):
   The default user for Postgres is `postgres``.
@@ -69,7 +69,7 @@ The following command summary can be used to get database servers, web servers, 
      * `sudo apt-get autoremove`
   
   ## [Python](https://www.python.org/doc/)
-  As of 20 May 2023, Ubuntu 20.04 for WSL has an installed Python
+  As of 20 May 2023, Ubuntu 24.04 for WSL has an installed Python
   version that is greater than 3.7. This is incompatible with the 
   psycopg driver for Postgres. In order to access Postgres, you'll 
   need to install an alternative. The module pg8000 seems to work
@@ -78,7 +78,7 @@ The following command summary can be used to get database servers, web servers, 
   github page.
    
   ## [NGINX Webserver](https://nginx.org/en/docs/)
-  Commands and configuration for running nginx on Ubuntu 20.04 WSL.
+  Commands and configuration for running nginx on Ubuntu 24.04 WSL.
   
   * Start the PHP engine: `sudo service php8.3-fpm start`
   * Start the web server: `sudo service nginx start`
