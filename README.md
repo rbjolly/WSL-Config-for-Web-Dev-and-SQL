@@ -69,7 +69,9 @@ The following command summary can be used to get database servers, web servers, 
      * `sudo apt-get autoremove`
   
   ## [Python](https://www.python.org/doc/)
-  As of 20 May 2023, Ubuntu 24.04 for WSL has an installed Python
+  Note the following may not apply to Ubuntu 24.04 so you are warned.
+  
+  As of 20 May 2023, Ubuntu 20.04 for WSL has an installed Python
   version that is greater than 3.7. This is incompatible with the 
   psycopg driver for Postgres. In order to access Postgres, you'll 
   need to install an alternative. The module pg8000 seems to work
