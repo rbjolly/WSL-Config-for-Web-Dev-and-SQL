@@ -57,9 +57,7 @@ The following command summary can be used to get database servers, web servers, 
   3. View current version: `php-fpm8.3 -v`
   
   4. List all files in PHP directory: `ls /etc/php/8.3/`
-  
-  5. Restart PHP engine: `sudo systemctl restart php8.3-fpm`
-  
+    
   6. Installing modules --> sudo apt install php<version>-<package_name>
      * Exampe install with some modules: `sudo apt install php8.3-{mysql,zip,bcmath}`
      * Install driver for postgres: `sudo apt -y install php-pgsql`
@@ -67,7 +65,18 @@ The following command summary can be used to get database servers, web servers, 
   7. To uninstall PHP 
      * `sudo apt-get purge php-fpm`
      * `sudo apt-get autoremove`
+  8. Switch to the PHP-FPM pool configurations directory /etc/php/8.3/fpm/pool.d/: `cd /etc/php/8.3/fpm/pool.d/`
   
+  9. Open the default PHP-FPM pool configuration /etc/php/8.3/fpm/pool.d/www.conf: `$ sudo nano www.conf`
+  
+  10. Find the [www] option to verify your PHP-FPM pool name.
+  
+  11. Find the user and group options and verify they run as the user: www-data.
+  
+  12. Find the listen directive and verify the socket path to access the PHP-FPM service on your server (listen = /run/php/php8.3-fpm.sock).
+  
+  13. Restart PHP engine if changes were made: `sudo systemctl restart php8.3-fpm`
+    
   ## [Python](https://www.python.org/doc/)
   Note the following may not apply to Ubuntu 24.04 so you are warned.
   
@@ -81,12 +90,34 @@ The following command summary can be used to get database servers, web servers, 
    
   ## [NGINX Webserver](https://nginx.org/en/docs/)
   Commands and configuration for running nginx on Ubuntu 24.04 WSL.
+
+  1. Install the Nginx web server application to test access to the PHP-FPM service: `sudo apt install nginx -y`
+  2. Back up the default Nginx virtual host configuration: 'sudo mv /etc/nginx/sites-available/default  /etc/nginx/sites-available/default.BAK'
+  3. Create a new default Nginx configuration file: `sudo nano /etc/nginx/sites-available/default`
+  4. Add the following configurations to the file: 'server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root  /var/www/html/;
+    index index.html index.php index.nginx-debian.html;
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_pass unix:/run/php/php-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi.conf;
+    }
+}'
+
+  5. Save and close the file.
+  6. Test the Nginx configuration for errors: `sudo nginx -t`
+  7. Restart NginX: `sudo systemctl restart nginx`
+  8. Summary of basic NginX vommands:
+     * Start the PHP engine: `sudo service php8.3-fpm start`
+     * Start the web server: `sudo service nginx start`
+     * Restart the web server when config has changed: `sudo service nginx restart`
+     * Stop the web server: `sudo service nginx stop`
   
-  * Start the PHP engine: `sudo service php8.3-fpm start`
-  * Start the web server: `sudo service nginx start`
-  * Restart the web server when config has changed: `sudo service nginx restart`
-  * Stop the web server: `sudo service nginx stop`
-  * Web server root: `/etc/nginx`
 
   ## Automating Server Startup
   You can automate the startup of services under WSL in a number of ways. One way to accomplish this task is to place the commands in a bash script and execute that script after you login. This way you only execute one command and start the services when you actually need them. So, create a file in your home directory called `'start-sercices.sh'` and issue the command `sudo chmod +x start-sercices.sh` to make the file executable. Then edit the file and enter the following: 
