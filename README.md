@@ -62,12 +62,9 @@ The following command summary can be used to get database servers, web servers, 
      * Exampe install with some modules: `sudo apt install php8.3-{mysql,zip,bcmath}`
      * Install driver for postgres: `sudo apt -y install php-pgsql`
   
-  7. To uninstall PHP 
-     * `sudo apt-get purge php-fpm`
-     * `sudo apt-get autoremove`
-  8. Switch to the PHP-FPM pool configurations directory /etc/php/8.3/fpm/pool.d/: `cd /etc/php/8.3/fpm/pool.d/`
+  8. Switch to the PHP-FPM pool configurations directory `/etc/php/8.3/fpm/pool.d/`: `cd /etc/php/8.3/fpm/pool.d/`
   
-  9. Open the default PHP-FPM pool configuration /etc/php/8.3/fpm/pool.d/www.conf: `$ sudo nano www.conf`
+  9. Open the default PHP-FPM pool configuration `/etc/php/8.3/fpm/pool.d/www.conf`: `$ sudo nano www.conf`
   
   10. Find the [www] option to verify your PHP-FPM pool name.
   
@@ -76,6 +73,10 @@ The following command summary can be used to get database servers, web servers, 
   12. Find the listen directive and verify the socket path to access the PHP-FPM service on your server: `listen = /run/php/php8.3-fpm.sock`
   
   13. Restart PHP engine if changes were made: `sudo systemctl restart php8.3-fpm`
+  
+  14. If you ever need to uninstall PHP: 
+     * `sudo apt-get purge php-fpm`
+     * `sudo apt-get autoremove`
     
   ## [Python](https://www.python.org/doc/)
   Note the following may not apply to Ubuntu 24.04 so you are warned.
