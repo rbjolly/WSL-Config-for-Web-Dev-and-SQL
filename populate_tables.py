@@ -1,3 +1,6 @@
+# Note: The following information may not apply to Ubuntu 24.04 as it was 
+# initially done uner 20.04.
+
 # When DBeaver generated this file, it requires that python have the 
 # followingh modules installed in order to query Postgres:
 #   psycopg2==2.8.5
